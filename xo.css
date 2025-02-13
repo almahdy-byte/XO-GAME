@@ -1,0 +1,127 @@
+:root
+{
+    --mainPadding : 60px 0 ;
+    --backGroundColor:#000814;
+    --squarsColor:#001d3d;
+    --xDivColor: #df3c3c; 
+    --oDivColor:#0a95ff;
+    --winnerColor:#fff60a;
+}
+body
+{
+    box-sizing: border-box;
+    background-color: var(--backGroundColor);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/* costomize the field */
+.game h1
+{
+    color: white;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin: 0 0 50px 0;
+}
+.game{
+    padding: var(--mainPadding);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.game .field
+{
+    display: grid;
+    background-color: transparent;
+}
+@media (min-width:992px) {
+    .game .field {
+        grid-template-columns: repeat(3, 250px);
+    }
+}
+@media (max-width:992px) {
+    .game .field {
+        grid-template-columns: repeat(3, 200px);
+    }
+}
+@media (max-width:768px) {
+    .game .field{
+        grid-template-columns: repeat(3, 150px);
+    }
+}
+@media (max-width:550px) {
+    .game .field {
+        grid-template-columns: repeat(3, 125px);
+    }
+}
+.game .field .child
+{
+        height: 150px;
+        margin: .5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2.5px solid white;
+}
+.game .field .xDiv
+{
+    color: var(--xDivColor);
+}
+.game .field .oDiv
+{
+    color: var(--oDivColor);
+}
+.game .field .xDiv,
+.game .field .oDiv
+{
+    transition: .3s;
+    font-size: 500%;
+    font-family: system-ui;
+}
+.win {
+    color: var(--winnerColor) !important; 
+    transition: .3s;
+    animation: winner 2s infinite;
+}
+button
+{
+    background-color: var(--winnerColor);
+    color: var(--squarsColor);
+    border: none;
+    width: 120px;
+    height: 40px;
+    font-weight: 600;
+    margin-top: 30px;
+    transition: .3s;
+}
+button:hover
+{
+    background-color: var(--backGroundColor);
+    color: var(--winnerColor);
+}
+.left
+{
+border-left: none !important;
+}
+.right
+{
+border-right: none !important;
+}
+.top
+{
+border-top: none !important;
+}
+.bottom
+{
+border-bottom: none !important;
+}
+@keyframes winner {
+    0%
+    {
+        
+    }
+    50% {
+        
+    }    100% {
+        
+    }
+}
